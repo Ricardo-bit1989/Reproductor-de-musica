@@ -20,40 +20,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 
-<!-- Body tiene el contenido visual -->
+
 
 <body>
  
-    <header>
-        <nav>
-            <div><img src="/assets/Icon.svg" alt="">
-            <h1>Hearnow</h1>
-             </div>
+    <div class="cuadrado" style="--i:0"></div>
+    <div class="cuadrado" style="--i:1"></div>
+    <div class="cuadrado" style="--i:2"></div>
+    <div class="container">
+        <div class="img-container">
+            <img src="/assets/song1.jpg.jfif" alt="">
+        </div>
+        <h2 id="titulo">Titulo de la cancion</h2>
+        <h3 id="Artista">Artista</h3>
+        <audio src="musica/song1.mp3"></audio>
 
-             <div class="container">
-                <input type="text" placeholder="Buscar musica">
-                <div class="btn">
-                    <i class="fa fa-search"></i> 
-    
+        <div class="progressBar" id="progressBar">
+            <div class="progress" id="progress"></div>
+                <div class="duracion">
+                    <span id="tiempoActual">0:00</span>
+                    <span id="Duracion">2:00</span>
                 </div>
-             </div>
-            
+            </div>
+            <div class="controles">
+                <ion-icon name="play-back" id="prev"></ion-icon>
+                <ion-icon name="play" id="play"></ion-icon>
+                <ion-icon name="play-forward" id="next"></ion-icon>
+            </div>
+        </div>
+    </div>
 
+    <!-- Script Librería Ionicons (Íconos) -->
 
-        </nav>
-
-
-
-    </header>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-
-
-
-
-
-
-
+    <!-- Script index.js -->
+     <script src="index.js"></script>
 
 
 </body>
