@@ -21,16 +21,14 @@ const songs = [
         displayName: 'Coney Island',
         artista: 'Taylor Swift & The national',
     },
-
     {
         name: 'song2',
-        displayName: 'Scrapbook',
+        displayName: 'Blinding Lights',
         artista: 'The Weeknd',
     },
-
     {
-        name: 'song1',
-        displayName: 'Tropic Fuse',
+        name: 'song3',
+        displayName: 'Dreamer',
         artista: 'Laufey',
     },
  ];
@@ -85,8 +83,7 @@ function prevSong() {
 
 function nextSong() {
     songIndex++;
-    if (songIndex > 0) {
-        songIndex = songs.legth - 1;  
+    if (songIndex > songs.legth - 1) {
         songIndex = 0;      
     }
     
@@ -96,7 +93,7 @@ function nextSong() {
 
 //al cargar las canciones se leera la primera cancion
 loadSong(songs[songIndex]);
-
+ 
 //actualizar la barra de progreso y el tiempo de la cancion
 
 function updateProgressBar(e) {
@@ -111,8 +108,40 @@ function updateProgressBar(e) {
             durationSeconds = `0${durationSeconds}`
             
         }
+
+        if (durationSeconds) {
+            duration.textContent = `${durationMinutes} : ${durationSeconds}`;
+            
+        }
+
+        const currentMinutes = Math.floor(currentTime / 60); // Calcula la duracion total del recorrido de la cancion
+        let currentSeconds = Math.floor(currentTime % 60);
+
+        if (currentSeconds < 10) {
+            currentSeconds = `0${durationSeconds}`
+            
+        }
+
+       if (currentSeconds) {
+           tiempoActual.textContent = `${currentMinutes} : ${durationSeconds}`;
+       }
     }
     
 }
+
+//Mostrar la barra de progreso
+
+function setProgressBar(e) {
+    const width = this.ClientWidth;
+    const clickX = e.offsetX;
+    const { duration } = music;
+    music.currentTime = (clickX / width) * duration;
+}
+
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
+music.addEventListener('ended', nextSong);
+music.addEventListener('timeupdate', updateProgressBar);
+progressContainer.addEventListener('click', setProgressBar);
 
 
