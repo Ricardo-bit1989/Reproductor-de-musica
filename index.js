@@ -120,11 +120,11 @@ function updateProgressBar(e) {
         if (currentSeconds < 10) {
             currentSeconds = `0${durationSeconds}`
             
-        }
+        };
 
        if (currentSeconds) {
            tiempoActual.textContent = `${currentMinutes} : ${durationSeconds}`;
-       }
+       };
     }
     
 }

@@ -13,8 +13,9 @@ body {
     min-height: 100vh;
     background: #c9ced3;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    justify-content: space-between;
+    align-items: start;
     background: linear-gradient(249deg, #12c2e9, #c471ed, #f64f59);
     background-size:600% 600%;
     animation: animateBackground 30s ease infinite;
@@ -155,10 +156,24 @@ body {
 }
 
 @keyframes animation {
-    0% 100% {
+    0% {
         transform: transLateY(-20px)
     }
     50% {
         transform: transLateY(20px)
     }
+    100% {
+        transform: transLateY(-20px)
+    }
+}
+
+.opciones{
+    display: grid;
+    justify-content: start;
+    align-items: start;
+    gap: 16px;
+}
+
+.music list{
+    background-color: #c9ced3;
 }
