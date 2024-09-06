@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Metadatos de la pagina -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="música gratis, hearnow, reproductor, online, listas, sin registro
+        escuchar música gratis, hearnow, todos los géneros, alta calidad
+        radio online gratis, hearnow, sin anuncios, descubre música>
+    <title>Hearnow</title>
+    <link rel=" shortcut icon" href="/assets/3706872-control-music-play-play-music-play-sound-start_108717.svg"
+        type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<div>
+    <title titulo>HearNow</title>
+    <img src="/assets/imagenes/Icon.svg" alt="">
+</div>
+
+
+<body class="bg-orange-500px-8 py-4">
+
+    <span class="font-bold text-ig">HearNow</span>
+
+    <header>
+        <nav>
+
+
+
+            <ul class="opciones">
+                <li>Inicio</li>
+                <li>sobre nosotros</li>
+                <li>Planes</li>
+
+            </ul>
+
+            <button>Explorar</button>
+
+        </nav>
+
+
+    </header>
+
+    <!-- <div class="cuadrado" style="--i:0"></div>
+    <div class="cuadrado" style="--i:1"></div>
+    <div class="cuadrado" style="--i:2"></div> -->
+
+
+    <div class="container">
+
+        <div class="img-container">
+            <img src="/assets/imagenes/song1.jpg" alt="" id="current-song-image">
+        </div>
+        <h2 id="current-song-title">Coney Island</h2>
+        <h3 id="current-song-author">Taylor Swift</h3>
+        <audio src="/musica/song1.mp3" controls id="current-song-audio" autoplay></audio>
+
+
+        <div class="progressBar" id="progressBar">
+            <div class="progress" id="progress"></div>
+            <div class="duracion">
+                <span id="tiempoActual">0:00</span>
+                <span id="tiempoDuracion">2:00</span>
+            </div>
+        </div>
+        <div class="controles">
+            <ion-icon name="play-back" id="prev"></ion-icon>
+            <ion-icon name="play" id="play"></ion-icon>
+            <ion-icon name="play-forward" id="next"></ion-icon>
+        </div>
+    </div>
+    </div>
+
+    <div id="track-list">
+
+
+        <!-- <div>
+            <img src="/assets/imagenes/imagenes de la lista/Img (1).svg" alt="">
+            <h3>Viva la Vida</h3>
+            <p>Viva la Vida or Death and All His Friends</p>
+    
+        </div>
+    
+        <div>
+            <img src="/assets/imagenes/imagenes de la lista/Img (2).svg" alt="">
+            <h3>The boy is mine</h3>
+            <p>Eternal Sunshine</p>
+    
+        </div>
+    
+        <div>
+            <img src="/assets/imagenes/imagenes de la lista/Img (3).svg" alt="">
+            <h3>Cardigan</h3>
+            <p>Folklore</p>
+    
+        </div>
+    
+        <div>
+            <img src="/assets/imagenes/imagenes de la lista/Img (4).svg" alt="">
+            <h3>Blinding Lights</h3>
+            <p>Blinding Lights</p>
+    
+        </div>
+    
+        <div>
+            <img src="/assets/imagenes/imagenes de la lista/Img (5).svg" alt="">
+            <h3>When Memories Snow</h3>
+            <p>The Land Is Inhospitable and So Are We</p>
+    
+        </div>
+    
+        <div>
+            <img src="/assets/imagenes/imagenes de la lista/Img (6).svg" alt="">
+            <h3>Lose Yourself</h3>
+            <p>Lose Yourself</p>
+    
+        </div>
+    
+        <div>
+            <img src="/assets/imagenes/imagenes de la lista/Img (7).svg" alt="">
+            <h3>Skyfall</h3>
+            <p>Skyfall</p>
+    
+        </div> -->
+    </div>
+
+
+
+
+    <!-- Script Librería Ionicons (Íconos) -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Script index.js -->
+
+    <script src="/index.js"></script>
+</body>
