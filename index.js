@@ -2,7 +2,7 @@
 
 console.log("datoString")
 
-axios.get('https://leonardoapi.onrender.com/songs')
+axios.get('https://api.institutoalfa.org/api/songs')
   .then(function (response) {
     // handle success
     console.log(response.data.songs);
@@ -19,12 +19,12 @@ axios.get('https://leonardoapi.onrender.com/songs')
 
         div.innerHTML = `
             <img 
-            src="${song.path.front}" 
+            src="https://api.institutoalfa.org/api/songs/image/${song.image.filename}" 
             alt="">
-            <h3 class="font-bold">>${song.title}</h3>
-            <p class="opasity-60">${song.author}
-                
-                  
+            <div class="musica__group">
+                <h3 class="font-bold">>${song.title}</h3>
+                <p class="opasity-60">${song.author}         
+            </div>
         `
 
 

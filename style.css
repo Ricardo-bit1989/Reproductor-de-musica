@@ -1,7 +1,7 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap');
 
-html {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,8 +37,8 @@ body {
 
 
 .container {
-    height: 450px;
-    width: 350px;
+    height: 480px;
+    width: 385px;
     background: rgba(255, 255, 255, 0,25);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(4px);
@@ -110,6 +110,7 @@ body {
     top: -15px;
     left: 95px;
     width: 200px;
+    
 
 }
 
@@ -181,36 +182,45 @@ body {
 }
 
 .musica {
-    img{
-        border-radius: 50%;
-        width:90px;
-        height: 90;
-
-    }
+    
     display: flex;
     align-items: center;
     position: relative;
     padding: 16px;
-   
+    
+}
+.musica img{
+    border-radius: 50%;
+    width:90px;
+    height: 90;
+    padding: 6px;
+
+}
+.musica h3 {
+    margin-right: 26px;
+}
+.musica__group{
+
 }
 
 header {
-    padding:12px 60px
+    padding: 60px
+    
 }
 
 header nav {
     display:flex;
     align-items: center;
     justify-content: space-between;
+    
 
 }
 
 header nav ul {
     display: flex;
     gap: 32px;
+    padding: 16px;
 }
 
-span {
 
-}
 
