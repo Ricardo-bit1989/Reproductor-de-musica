@@ -37,8 +37,8 @@ body {
 
 
 .container {
-    height: 480px;
-    width: 384px;
+    height: 520px;
+    width: 305px;
     background: rgba(255, 255, 255, 0,25);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(4px);
@@ -48,9 +48,9 @@ body {
 }
 
 .container .img-container {
-    width: 270px;
-    height: 270px;
-    position: relative;
+    width: 260px;
+    height: 260px;
+    position: center;
     top: -50px;
     left: 40px;
 
@@ -108,7 +108,7 @@ body {
 .container .controles {
     position: relative;
     top: -15px;
-    left: 95px;
+    left: 58px;
     width: 200px;
     
 
@@ -172,7 +172,7 @@ body {
     display: grid;
     justify-content: start;
     align-items: start;
-    gap: 32px;
+    gap: 30px;
 }
 
 .track-list{
