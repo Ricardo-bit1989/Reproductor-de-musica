@@ -1,4 +1,6 @@
+const query = new URLSearchParams(window.location.search).get('query')
 
+axios.get('https://api.institutoalfa.org/api/songs?query=' + query)
 
 console.log("datoString")
 
@@ -11,8 +13,7 @@ axios.get('https://api.institutoalfa.org/api/songs')
 
 
 
-        const container = document.
-        getElementById("track-list")
+        const container = document.getElementById("track-list")
 
         const div = document.createElement("div")
         div.setAttribute("class", "musica")
@@ -27,6 +28,19 @@ axios.get('https://api.institutoalfa.org/api/songs')
             </div>
         `
 
+        div.addEventListener("click",() => {
+            console.log(song.title)
+
+            document.getElementById("current-song-image").setAttribute("src", `https://api.institutoalfa.org/api/songs/image/${song.image.filename}`)
+            
+            document.getElementById("current-song-audio").setAttribute("src", `https://api.institutoalfa.org/api/songs/audio/${song.audio.filename}`)
+            
+            document.getElementById("current-song-title").innerHTML = song.title
+
+            document.getElementById("current-song-author").innerHTML = song.author
+
+            
+        })
 
         container.appendChild(div)
         
@@ -100,6 +114,7 @@ axios.get('https://api.institutoalfa.org/api/songs')
 //     music.src = `musica/${song.name}.mp3`;
 //     image.src = `imagenes/${song.name}.jpg`;
 // }
+
 
 // //cancion actual
 

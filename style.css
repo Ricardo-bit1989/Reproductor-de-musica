@@ -38,7 +38,7 @@ body {
 
 .container {
     height: 480px;
-    width: 385px;
+    width: 384px;
     background: rgba(255, 255, 255, 0,25);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(4px);
@@ -172,13 +172,13 @@ body {
     display: grid;
     justify-content: start;
     align-items: start;
-    gap: 16px;
+    gap: 32px;
 }
 
 .track-list{
     background-color: #c9ced3;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     padding: 16px;
+    
 }
 
 .musica {
@@ -198,6 +198,10 @@ body {
 }
 .musica h3 {
     margin-right: 26px;
+}
+
+.musica p {
+    opacity: 65%;
 }
 .musica__group{
 
@@ -221,6 +225,9 @@ header nav ul {
     gap: 32px;
     padding: 16px;
 }
+ 
+
+
 
 
 
